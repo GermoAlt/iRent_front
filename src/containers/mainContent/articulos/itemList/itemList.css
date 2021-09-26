@@ -1,0 +1,141 @@
+/*
+DATAVIEW
+ */
+
+.product-grid-item {
+    margin: .5em !important;
+    border: 1px solid #dee2e6 !important;
+    padding: 2rem;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+    border-radius: 4px;
+}
+
+.product-grid-item-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-list-item{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.product-list-item > img {
+    width: 150px;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+    margin-right: 2rem;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.product-list-item  .p-button{
+    margin-bottom: .5rem;
+}
+
+.product-list-item .product-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    align-self: flex-end;
+}
+
+.product-list-item .p-rating {
+    margin: 0 0 .5rem;
+}
+
+.product-list-detail{
+    flex: 1 1;
+    box-sizing: border-box;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-list-action{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-grid-item-content{
+    text-align: center;
+    width: 100%;
+}
+
+.product-grid-item-image-container {
+    width: 100%;
+    height: 200px;
+}
+
+.product-grid-item-image-container > img{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.p-dataview{
+    border: 1px solid #e9ecef;
+}
+
+.p-dataview-content > .p-grid{
+    border: 1px solid #e9ecef;
+}
+.p-dataview-list{
+    /*width:100px;*/
+    /* height: 100px;*/
+}
+
+.p-dataview-grid{
+    width:80vw;
+    height: 40vh;
+}
+
+.product-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-description{
+    margin: 0 0 1rem;
+}
+
+.product-grid-item-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.product-price{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.product-category{
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.product-category-icon{
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.featured{
+    margin: auto;
+    max-width: 100%;
+    padding-bottom: 50px;
+}
+
+.featured > .p-dataview{
+    width: 100%;
+}
+
+.featured-panel-title{
+    font-size: 35px;
+    padding: 0 !important;
+    margin: 0 !important;
+}

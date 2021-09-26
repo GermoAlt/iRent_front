@@ -1,0 +1,16 @@
+{
+  "data": [
+    {"idTransaction": 1, "total": 1290, "date":  "01/01/1970",
+      "items": [
+        {"name":  "Impresora", "price": "250", "amount": "5"},
+        {"name":  "Pack lapicera", "price": "20", "amount": "2"}
+      ]
+    },
+    {"idTransaction": 2, "total": 4230, "date":  "01/01/1970",
+      "items": [
+        {"name":  "Impresora", "price": "250", "amount": "15"},
+        {"name":  "Cuaderno", "price": "20", "amount": "24"}
+      ]
+    }
+  ]
+}

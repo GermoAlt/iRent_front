@@ -1,0 +1,20 @@
+/*
+FOOTER
+ */
+
+.app-footer{
+    position: absolute;
+    width: 100%;
+    color: #0D89EC;
+    height: 50vh;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.footer-content {
+
+}
+
+.footer-content-column {
+
+}

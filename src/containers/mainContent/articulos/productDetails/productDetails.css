@@ -1,0 +1,8 @@
+.product-detail-main-image{
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.product-details-panel-content-container{
+    display: flex;
+}

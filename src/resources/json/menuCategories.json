@@ -1,0 +1,30 @@
+{
+  "data": [
+  {
+    "label": "Inicio",
+    "icon": "pi pi-fw pi-home"
+  },
+  {
+    "label": "Categorías",
+    "icon": "pi pi-fw pi-th-large",
+    "items": [
+      {
+        "label": "Cuadernos",
+        "icon": "pi pi-book"
+      }
+    ]
+  },
+  {
+    "label": "Ofertas",
+    "icon": "pi pi-fw pi-tags"
+  },
+  {
+    "label": "Transacciones",
+    "icon": "pi pi-fw pi-book"
+  },
+  {
+    "label": "Modificar Productos",
+    "icon": "pi pi-fw pi-sliders-v"
+  }
+]
+}

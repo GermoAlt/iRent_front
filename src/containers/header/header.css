@@ -1,0 +1,68 @@
+
+/*
+HEADER
+*/
+
+.app-header{
+    width: 100%;
+    flex-direction:column;
+}
+
+.p-tabmenu-nav{
+    justify-content: center;
+}
+
+.menu-categorias{
+    border: 0 !important;
+}
+
+.menu-categorias-content{
+    border: 0 !important;
+}
+
+.logo{
+    max-height: 3em;
+    margin-top: 10px ;
+    margin-right: 10px ;
+}
+
+.searchbar-container{
+    border-radius: 25px !important;
+    flex-grow: 2;
+    align-content: flex-start;
+}
+
+#searchbar{
+    display:flex;
+    margin-right: 1em;
+}
+
+#searchbar > .p-inputtext {
+    width: 100%;
+    padding-right: 1em;
+    max-width: 450px;
+    border-radius: 25px;
+}
+
+.p-toolbar {
+    padding: 0px !important;
+}
+
+.p-toolbar-group-left{
+    flex-grow: 4;
+    min-width: 400px;
+    padding-left: 20px;
+}
+
+.p-toolbar-group-right{
+    display:flex;
+    flex-grow: 1;
+}
+
+.header-cart-badge{
+    color: white !important;
+    background-color: #2196F3 !important;
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,30 @@
+
+/*
+CHECKOUT
+ */
+
+.checkout-accordion{
+    margin-top:25px;
+}
+
+.checkout-accordion-tab-content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-accordion-input{
+    max-width:30vw;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.checkout-accordion-tab-button{
+    margin-top: 25px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+.cart-item-list-step-1{
+    display: flex;
+    margin-top: 30px;
+}

@@ -14,23 +14,24 @@ import MainContent from "./containers/mainContent/MainContent";
 
 import { Provider as CartProvider } from './contexts/CartContext'
 import {UserProvider} from './contexts/UserContext'
+import {CloudinaryContext} from "cloudinary-react";
 
 export default function App() {
 
     PrimeReact.ripple = true;
   return (
       <div className="App">
-
-          <CartProvider>
-            <UserProvider>
-                <Router>
-                  <ScrollTop/>
-                      <Header/>
-                      <MainContent/>
-                </Router>
-            </UserProvider>
-          </CartProvider>
-
+          <CloudinaryContext cloudName={"remote-german"} secure={true}>
+              <CartProvider>
+                <UserProvider>
+                    <Router>
+                      <ScrollTop/>
+                          <Header/>
+                          <MainContent/>
+                    </Router>
+                </UserProvider>
+              </CartProvider>
+          </CloudinaryContext>
       </div>
   );
 }

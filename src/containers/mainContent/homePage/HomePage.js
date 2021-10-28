@@ -1,15 +1,13 @@
 import './homePage.css';
-import logo from '../../../resources/images/logo.svg';
 import React from "react";
-import CarouselPrincipal from "./CarouselPrincipal";
+import ExperiencePanel from "./experiencePanel/ExperiencePanel";
+import SearchPanel from "./searchPanel/SearchPanel";
 
 export default function HomePage() {
     return (
         <div className={"home-page"}>
-            <div className={"home-page-banner"}>
-                <img src={logo} alt={"logo"}/>
-            </div>
-            <CarouselPrincipal />
+            <SearchPanel/>
+            <ExperiencePanel/>
         </div>
     );
 }

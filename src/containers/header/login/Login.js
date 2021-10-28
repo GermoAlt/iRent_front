@@ -4,7 +4,7 @@ import React, {useContext, useState} from "react";
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
-import logo from "../../../resources/images/logo.svg";
+import logo from "../../../resources/images/logo_full.svg";
 import AuthButton from "./AuthButton";
 import useUser from "../../../hooks/useUser";
 import axios from "axios";

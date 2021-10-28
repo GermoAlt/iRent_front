@@ -1,0 +1,15 @@
+.home-page-experience-panel{
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+}
+
+.experience-panel-card{
+    height:410px;
+    width: 325px;
+}
+
+p {
+    position: relative;
+    bottom: 0;
+}

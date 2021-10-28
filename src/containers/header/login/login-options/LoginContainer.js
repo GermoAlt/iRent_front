@@ -1,4 +1,4 @@
-import logo from "../../../../resources/images/logo.svg";
+import logo from "../../../../resources/images/logo_full.svg";
 import {InputText} from "primereact/inputtext";
 import {Link} from "react-router-dom";
 import React from "react";

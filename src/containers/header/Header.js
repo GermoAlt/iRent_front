@@ -10,7 +10,7 @@ import { Button } from 'primereact/button';
 import { Link } from 'react-router-dom'
 import classNames from "classnames";
 import articulosJson from '../../resources/json/products.json';
-import logo from '../../resources/images/logo_de_costado.svg';
+import logo from '../../resources/images/logo.png';
 import Login from "./login/Login";
 import { CartContext } from '../../contexts/CartContext';
 
@@ -82,36 +82,25 @@ export default function Header(props) {
         }]
 
     const leftContents = (
-        <React.Fragment >
+        <React.Fragment>
             <img src={logo} className='logo' alt='Webquill'/>
-            <MegaMenu className="menu-categorias">
-                <Menubar className={"menu-categorias-content"} model={menuCategories}>
-
-                </Menubar>
-            </MegaMenu>
         </React.Fragment>
     );
 
-    const rightContents = (
-        <div/>
-    )
-
-    // const rightContents = (
-    //     <React.Fragment>
-    //         <div className="searchbar-container">
-    //             <span className="p-input-icon-right" id="searchbar">
-    //                 <i className="pi pi-search" />
-    //                 <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Buscar"/>
-    //             </span>
-    //         </div>
-    //         <Link to="/carrito" className="p-button-rounded p-mr-2 header-cart-button">
-    //             <Button label={"Carrito"} icon="pi pi-shopping-cart" className="p-mr-2 p-button-text p-button-rounded">
-    //                 <Badge className={`${carritoCantidad.length === 0 ? "hidden" : ""} header-cart-badge`} value={carritoCantidad.length}/>
-    //             </Button>
-    //         </Link>
+    // const leftContents = (
+    //     <React.Fragment >
+    //         <MegaMenu className="menu-categorias">
+    //             <Menubar className={"menu-categorias-content"} model={menuCategories} />
+    //         </MegaMenu>
     //         <Login/>
     //     </React.Fragment>
-    // );
+    // )
+
+    const rightContents = (
+        <React.Fragment>
+            <Login/>
+        </React.Fragment>
+    );
 
 
     return (

@@ -6,20 +6,35 @@ import {Card} from "primereact/card";
 import {Image, Transformation} from "cloudinary-react";
 
 const generarCardsExperiencias = () => {
+    var dict = [
+        {"id": "tenis", "description": "Tenis"},
+        {"id": "golf", "description": "Golf"}
+    ]
+
+    return dict.map(generarCard)
+}
+
+const generarCard = (element) => {
     return (
-        <div className={"experience-panel-card"}>
-            <Image publicId={"Seminario/ciclismo"}>
+        <div key={element.id}>
+            <Image publicId={"Seminario/" + element.id}>
                 <Transformation width="325" height="410" crop={"scale"}/>
             </Image>
-            <p>Ciclismo</p>
-            <p>desde 900$</p>
+            <p>{element.text}</p>
         </div>
     )
 }
 
 export default function ExperiencePanel() {
 
-    return <div className={"home-page-experience-panel"}>
-        {generarCardsExperiencias()}
-    </div>
+    return(
+        <div className={"home-page-experience-panel"}>
+            <div className={"experience-panel-separator"}>
+                Desafiate y viví una experiencia deportiva inolvidable
+            </div>
+            <div className={"experience-panel-list"}>
+                {generarCardsExperiencias()}
+            </div>
+        </div>
+    )
 }

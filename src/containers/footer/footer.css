@@ -3,18 +3,29 @@ FOOTER
  */
 
 .app-footer{
-    position: absolute;
-    width: 100%;
-    color: #0D89EC;
-    height: 50vh;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: gray;
+    position: relative;
     bottom: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    color: white;
 }
 
 .footer-content {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .footer-content-column {
+    display: flex;
+    gap: 10px;
+}
 
+.separator{
+    flex-grow: 10;
 }

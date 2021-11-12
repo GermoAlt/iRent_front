@@ -15,6 +15,7 @@ import MainContent from "./containers/mainContent/MainContent";
 import { Provider as CartProvider } from './contexts/CartContext'
 import {UserProvider} from './contexts/UserContext'
 import {CloudinaryContext} from "cloudinary-react";
+import Footer from "./containers/footer/footer";
 
 export default function App() {
 
@@ -23,11 +24,12 @@ export default function App() {
       <div className="App">
           <CloudinaryContext cloudName={"remote-german"} secure={true}>
               <CartProvider>
-                <UserProvider>
-                    <Router>
-                      <ScrollTop/>
+                  <UserProvider>
+                      <Router>
+                          <ScrollTop/>
                           <Header/>
                           <MainContent/>
+                          <Footer/>
                     </Router>
                 </UserProvider>
               </CartProvider>

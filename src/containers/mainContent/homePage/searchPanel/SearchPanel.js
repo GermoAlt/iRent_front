@@ -15,7 +15,7 @@ export default function SearchPanel() {
         <div className={"home-page-panel-busqueda"}>
             <div className={"panel-busqueda-container"}>
                 <div>
-                    <h2 className={"panel-busqueda-titulo"}>Buscá tu paquete ideal</h2>
+                    <h2 className={"panel-busqueda-titulo"}>Encontrá tu experiencia ideal</h2>
                 </div>
                 <div className={"panel-busqueda-input"}>
                     <span className="p-float-label label-placeholder-container">
@@ -32,7 +32,7 @@ export default function SearchPanel() {
                     </span>
                 </div>
                 <div className={"panel-busqueda-boton-container"}>
-                    <Button label={"Buscar"} icon={"pi pi-search"}  className="p-button-raised p-button-rounded"/>
+                    <Button label={"Buscar"} icon={"pi pi-search"}  className="p-button-raised"/>
                 </div>
             </div>
         </div>

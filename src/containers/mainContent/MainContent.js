@@ -7,6 +7,7 @@ import ProductPanel from "./adminPanel/ProductPanel";
 import Carrito from "./cart/Carrito";
 import ProductDetails from "./articulos/productDetails/ProductDetails";
 import UserProfile from "./userProfile/UserProfile";
+import Footer from "../footer/footer";
 
 export default function MainContent(props){
  return (

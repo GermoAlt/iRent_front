@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap');
+
 .home-page-experience-panel{
     margin-left: 25px;
     margin-right: 25px;
     display: flex;
+    flex-direction: column;
 }
 
 .experience-panel-card{
@@ -9,7 +12,18 @@
     width: 325px;
 }
 
-p {
-    position: relative;
-    bottom: 0;
+.experience-panel-separator{
+    background: gray;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Red Hat Text', sans-serif;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.experience-panel-list {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
 }

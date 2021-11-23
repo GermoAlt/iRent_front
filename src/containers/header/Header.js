@@ -7,7 +7,7 @@ import { Toolbar } from 'primereact/toolbar';
 import { InputText } from 'primereact/inputtext';
 import { Badge } from 'primereact/badge';
 import { Button } from 'primereact/button';
-import { Link } from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import classNames from "classnames";
 import articulosJson from '../../resources/json/products.json';
 import logo from '../../resources/images/logo.png';
@@ -29,6 +29,10 @@ export default function Header(props) {
                 </Link>
             </li>
         )
+    }
+
+    const redirect = (url) => {
+        return <Redirect to={url} />
     }
 
     const menuCategories = [
@@ -83,7 +87,9 @@ export default function Header(props) {
 
     const leftContents = (
         <React.Fragment>
-            <img src={logo} className='logo' alt='Webquill'/>
+            <Link to={"/"}>
+                <img src={logo} className='logo' alt='Webquill'/>
+            </Link>
         </React.Fragment>
     );
 
@@ -98,6 +104,12 @@ export default function Header(props) {
 
     const rightContents = (
         <React.Fragment>
+            <Link to={"/instructor/nuevo"}>
+                <Button label={"Publicar"} icon="pi pi-plus" className="p-button-rounded p-mr-20"/>
+            </Link>
+            <Link to={"experienciasPendientes"}>
+                <Button label={"Mis alquileres"} icon="pi pi-calendar" className="p-button-rounded p-mr-20"/>
+            </Link>
             <Login/>
         </React.Fragment>
     );

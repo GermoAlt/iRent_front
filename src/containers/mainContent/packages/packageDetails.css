@@ -1,0 +1,87 @@
+.package-data-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.package-data-panel-superior{
+    display: flex;
+    flex-direction: row;
+    gap: 75px
+}
+
+.package-data-panel-superior-der{
+    display: flex;
+    flex-direction: column;
+}
+
+.package-info-includes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 25px
+}
+
+.package-info-button-container{
+    margin-left: auto;
+}
+.package-info-panel-includes-images{
+    display: flex;
+    justify-content: center;
+    gap:25px
+}
+
+.info-card-title{
+    font-family: VarsityTeam;
+    font-size: 35px;
+}
+
+.aaaaa{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bbbbb{
+    display: flex;
+    flex-direction: row;
+    gap: 50px
+}
+
+.package-info-card{
+    font-size: 25px;
+}
+
+.package-data-panel-inferior-title{
+    font-family: VarsityTeam;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.line-separator{
+    margin-top:25px;
+    margin-bottom:25px;
+    width: 100%;
+    border: black 1px solid;
+}
+
+.line-separator-small{
+    margin-top:5px;
+    margin-bottom:5px;
+    width: 100%;
+    border: black 1px solid;
+}
+
+.package-data-panel-inferior-content-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-detail-title{
+    font-family: VarsityTeam;
+    font-size: 25px;
+}
+
+.edicion-articulo-preseleccionado{
+    display: flex;
+    gap: 25px
+}

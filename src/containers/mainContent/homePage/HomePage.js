@@ -4,7 +4,7 @@ import ExperiencePanel from "./experiencePanel/ExperiencePanel";
 import SearchPanel from "./searchPanel/SearchPanel";
 import {Button} from "primereact/button";
 import {Image, Transformation} from "cloudinary-react";
-import Footer from "../../footer/footer";
+import {Link as LinkScroll} from "react-scroll";
 
 export default function HomePage() {
 
@@ -25,7 +25,9 @@ export default function HomePage() {
                         Seleccioná el deporte que quieras probar y nos encargamos del resto
                     </div>
                     <div className={"button-panel-element-button"}>
+                        <LinkScroll to={"scrollFlag"} spy={true} smooth={true} activeClass={"true"}>
                         <Button label={"VER EXPERIENCIAS"}/>
+                        </LinkScroll>
                     </div>
                 </div>
                 <div className={"button-panel-element"}>
@@ -57,8 +59,8 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+            <div id={"scrollFlag"}/>
             <ExperiencePanel/>
-
         </div>
     );
 }

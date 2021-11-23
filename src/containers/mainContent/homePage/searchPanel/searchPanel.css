@@ -27,12 +27,12 @@
 }
 
 .p-inputtext{
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .panel-busqueda-titulo{
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -63,4 +63,12 @@
 
 .p-filled + label{
     color: white;
+}
+
+.p-dropdown {
+    width:250px;
+    display: flex;
+}
+
+.p-dropdown-label{
 }

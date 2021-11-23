@@ -1,0 +1,72 @@
+.instructor-panel-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.instructor-panel-container-title{
+    font-size: 5em;
+    margin-right: auto;
+    margin-left: 25px;
+    font-family: "VarsityTeam";
+    margin-bottom: 25px;
+}
+
+.mainContent{
+    margin-bottom: 0;
+    /*margin: 0 !important;*/
+    /*max-width: 3000px!important;*/
+}
+
+.item-botones{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin-top: auto !important;
+}
+
+.card-icon{
+    height: 50px;
+    width: 50px !important;
+    margin-right: 0 !important;
+}
+
+.instructor-filter-panel{
+    margin-left: 25px;
+    margin-right: 25px;
+    flex-grow: 1;
+}
+
+.item-iconos-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-content: stretch !important;
+    height: 100% !important;
+}
+
+.iconos-container{
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    margin-bottom: auto;
+}
+
+
+.product-item{
+    justify-content: space-between !important;
+    align-content: stretch !important;
+    display: flex;
+
+}
+
+.panel-paquetes{
+    display: flex;
+    flex-grow: 5;
+
+}
+
+.panel-filtro{
+    display: flex;
+    justify-content: center;
+    gap:25px;
+}

@@ -1,0 +1,6 @@
+[
+  {"id": "1000","code": "f230fh0g3","name": "Tenis para Principiantes",   "image": "tenis-para-principiantes", "cantidad":1, "ubicacion":  "Palermo",     "price": 2500,   "incluyeArticulo":  true, "incluyeInstructor":  true, "incluyeCancha": true, "deporte":  "tenis", "description":  "Descripcion del paquete", "fecha":  "20/11"},
+  {"id": "1001","code": "f230fh0g3","name": "Tenis Deluxe",               "image": "tenis-deluxe",             "cantidad":3, "ubicacion":  "Avellaneda",  "price": 6000,   "incluyeArticulo":  true, "incluyeInstructor":  true, "incluyeCancha": true, "deporte":  "tenis", "description":  "Descripcion del paquete", "fecha":  "20/11"},
+  {"id": "1002","code": "f230fh0g3","name": "Tenis en Palermo",           "image": "tenis-en-palermo",         "cantidad":2, "ubicacion":  "Palermo",     "price": 4000,   "incluyeArticulo":  true, "incluyeInstructor":  true, "incluyeCancha": true, "deporte":  "tenis", "description":  "Descripcion del paquete", "fecha":  "20/11"},
+  {"id": "1003","code": "f230fh0g3","name": "Tenis Expert",               "image": "tenis-expert",             "cantidad":1, "ubicacion":  "Colegiales",  "price": 3000,   "incluyeArticulo":  true, "incluyeInstructor":  true, "incluyeCancha": true, "deporte":  "tenis", "description":  "Descripcion del paquete", "fecha":  "20/11"}
+]

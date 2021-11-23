@@ -104,7 +104,7 @@ const AuthButton = props => {
             </div>
         )
     } else {
-        return <Button label="Login" icon="pi pi-sign-in" className="p-button-rounded p-mr-2" onClick={() => props.onClick('displayBasic')} />
+        return <Button label="Login" icon="pi pi-user" className="p-button-rounded p-mr-2" onClick={() => props.onClick('displayBasic')} />
     }
 }
 

@@ -61,6 +61,8 @@ HEADER
     display:flex;
     flex-grow: 1;
     justify-content: flex-end;
+    gap: 10px;
+    margin-right: 10px;
 }
 
 .header-cart-badge{

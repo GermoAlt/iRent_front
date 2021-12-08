@@ -7,6 +7,8 @@ import useUser from "../../../hooks/useUser";
 import {Accordion, AccordionTab} from "primereact/accordion";
 import {Calendar} from "primereact/calendar";
 import UserInformationPanel from "./UserInformationPanel";
+import ResponsiveDrawer from "./Drawer";
+import ProfileContent from "./ProfileContent";
 
 
 const UserProfile = () => {
@@ -19,9 +21,9 @@ const UserProfile = () => {
     let du = user.du;
     let telefono = user.telefono;
 
-    if(user.tipo !== "user"){
+    /*if(user.tipo !== "user"){
         return <Redirect to={"/"}/>
-    }
+    }*/
 
     const guardarCambios = () => {
 
@@ -39,8 +41,8 @@ const UserProfile = () => {
 
     return(
         <div className={"userProfile"}>
-            <UserInformationPanel></UserInformationPanel>
-
+            {/*<UserInformationPanel></UserInformationPanel>*/}
+            <ProfileContent />
             <Accordion className={"checkout-accordion"} activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)}>
             </Accordion>
         </div>

@@ -22,7 +22,7 @@ export default function MainContent(props){
            <Route path="/gestionProductos" component={ProductPanel}/>
            <Route path="/carrito" component={Carrito}/>
            <Route path="/producto/:id"component={ProductDetails}/>
-           <Route path="/perfil" component={UserProfile}/>
+           <Route exact path="/perfil" component={UserProfile}/>
            <Route path="/detallePaquete/:id" component={PackageDetails}/>
 
            <Redirect to={"/"} />

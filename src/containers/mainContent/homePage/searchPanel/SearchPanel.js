@@ -69,7 +69,7 @@ export default function SearchPanel(props) {
                     <span className=" label-placeholder-container">
                         <Dropdown id={"ubicacion"} className={"a"} optionLabel={"name"} placeholder={"Selecciona una ubicacion"} options={ciudades} value={ubicacion} onChange={(e) => setUbicacion(e.target.value)}/>
                     </span>
-                    <span className=" label-placeholder-container">
+                    <span className=" label-placeholder-container" >
                         <Calendar id={"fecha"} showIcon placeholder={"Ingresá una fecha"} className={"p-d-block p-mb-2"} value={desde}
                                   onChange={(e) => setDesde(e.target.value)} locale="es" dateFormat="dd/mm/yy"/>
                     </span>

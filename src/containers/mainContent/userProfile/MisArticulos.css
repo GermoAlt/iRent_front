@@ -1,0 +1,30 @@
+.cardStyle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between!important;
+    align-content: space-between!important;
+    align-items: stretch;
+}
+
+.card-item{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.card-item:nth-child(1) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.card-item:nth-child(2) {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+.actions-grid {
+    margin-top: 15px;
+}

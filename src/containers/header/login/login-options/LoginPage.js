@@ -68,11 +68,12 @@ return(
                 <small id="username2-help" className="p-error p-d-block p-ml-auto">{errorMessage}</small>
             </span>
             <div className={"login-dialog-sign-up-text  p-mt-2"}>
-                    <small>No tenes cuenta? <span className={"clickable"} onClick={() => props.setActionType('register')}>Hacé click aquí</span></small>
+                    <small>No tenes cuenta? <span className={"clickable"}  onClick={() => props.setActionType('register')}>Hacé click aquí</span></small>
             </div>
-            <div className={"login-dialog-footer"}>
-                <Button label="Login" className="p-button-rounded p-mt-2 p-button-text" onClick={() => validateLogin()} />
-                <Button label="Cancelar" className="p-button-rounded p-mt-2 p-button-secondary p-button-text" onClick={() => props.ocultar()} />
+            <br/>
+            <div className={"login-dialog-footer"} >
+                <Button label="Login" className="p-button-rounded p-mt-2 p-button-text"style={{backgroundColor: "#775094"}} onClick={() => validateLogin()} />
+                <Button label="Cancelar" className="p-button-rounded p-mt-2 p-button-secondary p-button-text" style={{backgroundColor: "#434343", marginLeft: "10px"}}onClick={() => props.ocultar()} />
             </div>
         </div>
     </div>

@@ -5,13 +5,13 @@
 }
 
 .home-page-panel-busqueda{
-    background: url("https://www.sportsengine.com/sites/default/files/styles/webp_1200_w/public/images/shutterstock_1026630514.jpg.webp");
+    background: url("https://wallpapercave.com/wp/wp4989892.jpg");
     background-size: cover;
     padding: 50px;
 }
 
 .panel-busqueda-container {
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(67,67,67, 0.5);
     padding: 0 25px 25px;
     display: flex;
     flex-direction: column;
@@ -34,8 +34,9 @@
     text-align: center;
     font-size: 50px;
     color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    font-weight: lighter;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #2B1E35;
     font-family: "VarsityTeam";
 }
 

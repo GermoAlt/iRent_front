@@ -10,6 +10,7 @@ import UserProfile from "./userProfile/UserProfile";
 import PackageList from "./packages/PackageList";
 import InstructorPanel from "./instructor/InstructorPanel";
 import PackageDetails from "./packages/PackageDetails";
+import RacketEdit from "./packages/RacketEdit";
 
 export default function MainContent(props){
  return (
@@ -24,6 +25,7 @@ export default function MainContent(props){
            <Route path="/producto/:id"component={ProductDetails}/>
            <Route exact path="/perfil" component={UserProfile}/>
            <Route path="/detallePaquete/:id" component={PackageDetails}/>
+           <Route path="/editarRaqueta/" component={RacketEdit}/>
 
            <Redirect to={"/"} />
        </Switch>

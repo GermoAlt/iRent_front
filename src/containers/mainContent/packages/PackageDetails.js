@@ -4,6 +4,7 @@ import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
 import {Rating} from "primereact/rating";
+import RacketEdit from "./RacketEdit"
 
 var data = require('./PackageData.json')
 

@@ -15,7 +15,7 @@ import MainContent from "./containers/mainContent/MainContent";
 import { Provider as CartProvider } from './contexts/CartContext'
 import {UserProvider} from './contexts/UserContext'
 import {CloudinaryContext} from "cloudinary-react";
-import Footer from "./containers/footer/footer";
+import Footer from "./containers/footer/Footer";
 import background from "./resources/images/background.png"
 
 export default function App() {

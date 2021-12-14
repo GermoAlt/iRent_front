@@ -11,15 +11,15 @@ const Footer = () => {
                 <div className={"footer-content-column"}>
                     <Image publicId={"Seminario/facebook"}>
                         <Transformation width={image_size} height={image_size} crop={"scale"}/>
-                        <Transformation effect="replace_color:white" />
+                        <Transformation effect="replace_color:05B5FF" />
                     </Image>
                     <Image publicId={"Seminario/twitter"}>
                         <Transformation width={image_size} height={image_size} crop={"scale"}/>
-                        <Transformation effect="replace_color:white" />
+                        <Transformation effect="replace_color:05B5FF" />
                     </Image>
                     <Image publicId={"Seminario/instagram"}>
                         <Transformation width={image_size} height={image_size} crop={"scale"}/>
-                        <Transformation effect="replace_color:white" />
+                        <Transformation effect="replace_color:05B5FF" />
                     </Image>
                 </div>
                 <div className={"separator"}/>

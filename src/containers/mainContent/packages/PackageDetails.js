@@ -1,5 +1,5 @@
 import React from "react";
-import {useParams} from "react-router-dom";
+import {Redirect, useHistory, useParams} from "react-router-dom";
 import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
@@ -12,9 +12,10 @@ export default function PackageDetails(){
     const id = useParams().id
     const packageData = data.filter(x => x.id === id)[0]
     const image_size = 75
+    let history = useHistory()
 
     const submit = () => {
-        
+        history.push("/ordenExitosa")
     }
 
     return (

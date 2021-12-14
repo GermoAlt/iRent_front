@@ -13,17 +13,18 @@
 }
 
 .experience-panel-separator{
-    background: gray;
     border-radius: 5px;
     color: white;
-    font-size: 35px;
-    /*font-family: 'Red Hat Text', sans-serif;*/
-    font-family: VarsityTeam;
-    padding: 5px;
-    margin-bottom: 25px;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    font-size: 45px;
+    font-family: "Bebas Neue";
+    padding-top: 2px;
+    margin-bottom: 50px;
+    flex:1;
+    background-repeat: no-repeat;
+    background: linear-gradient(0.25turn, #05B5FF, #C71FE9);
 }
+
+
 
 .experience-panel-list {
     display: flex;

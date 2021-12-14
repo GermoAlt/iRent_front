@@ -19,7 +19,9 @@
 .panel-busqueda-input{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .p-inputtext{
@@ -28,12 +30,16 @@
 
 .panel-busqueda-titulo{
     text-align: center;
-    font-size: 50px;
-    color: black;
+    font-size: 100px;
+    margin: 25px;
     font-weight: lighter;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
-    font-family: "VarsityTeam";
+    color: #C71FE9;
+    -webkit-text-stroke: 0.5px black;
+    font-family: "Bebas Neue", cursive;
+}
+
+.panel-busqueda-titulo > span {
+    color: #05B5FF;
 }
 
 .panel-busqueda-boton-container{

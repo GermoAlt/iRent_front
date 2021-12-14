@@ -39,6 +39,7 @@
 
 
 .panel-busqueda-titulo > span {
+    text-shadow: 4px 4px 3px #05b5ff;
     /*color: #05B5FF;*/
 }
 

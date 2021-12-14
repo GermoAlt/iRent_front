@@ -14,13 +14,13 @@
     align-items: center;
     justify-content: center;
     margin-top: 250px;
-    background: linear-gradient(268deg, #c71fe9, #05b5ff) no-repeat;
     padding: 5px;
-    background-size: 400% 400%;
 
-    -webkit-animation: order-successful-animation 1s ease infinite;
-    -moz-animation: order-successful-animation 1s ease infinite;
-    -o-animation: order-successful-animation 1s ease infinite;
+    background-size: 400% 400%;
+    background: linear-gradient(268deg, #c71fe9, #05b5ff) no-repeat;
+    -webkit-animation: order-successful-animation 2s ease infinite;
+    -moz-animation: order-successful-animation 2s ease infinite;
+    -o-animation: order-successful-animation 2s ease infinite;
     animation: order-successful-animation 2s ease infinite;
 }
 

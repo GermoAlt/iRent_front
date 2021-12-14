@@ -6,7 +6,7 @@ import LoginPage from "./LoginPage";
 import RegisterUser from "./RegisterUser";
 
 const LoginContainer = (props) => {
-    if (props.actionType == "register") {
+    if (props.actionType === "register") {
         return (
             <div className={"login-dialog-content-container"}>
                 <svg src={logo} className='login-dialog-logo' alt='Webquill'/>
@@ -19,7 +19,7 @@ const LoginContainer = (props) => {
                               ocultar={() => props.ocultar()}/>
             </div>
         )
-    } else if (props.actionType == "login") {
+    } else if (props.actionType === "login") {
         return (
             <div className={"login-dialog-content-container"}>
                 <img src={logo} className='login-dialog-logo' alt='Webquill'/>

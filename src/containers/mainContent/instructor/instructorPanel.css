@@ -33,16 +33,13 @@
 .item-iconos-info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between !important;
-    align-content: stretch !important;
-    height: 100% !important;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .iconos-container{
     display: flex;
-    gap: 25px;
-    margin-left: auto;
-    margin-bottom: auto;
+    gap: 10px;
 }
 
 

@@ -4,7 +4,6 @@ import {TieredMenu} from "primereact/tieredmenu"
 import {Link} from "react-router-dom";
 import classNames from "classnames";
 import useUser from "../../../hooks/useUser";
-import { Avatar } from 'primereact/avatar';
 
 
 
@@ -97,10 +96,9 @@ const AuthButton = props => {
         return (
             <div>
                 <TieredMenu model={items} className={"pull-left"} popup ref={menu} />
-                <Button className="p-button-rounded p-button-text p-mr-2" style={{backgroundColor: "#C71FE9"}} onClick={(event) => menu.current.toggle(event)}>
-                    <Avatar label={"P"} shape={"circle"} className={"p-mr-2"} />
-                    <span className={"login-button-name-label"}>Hola {user.name ? user.name : ""}</span>
-                </Button>
+                <Button label={`Hola ${user.name ? user.name : ""}`} icon="pi pi-user"
+                        className="p-button-rounded p-button-text p-mr-2"
+                        onClick={(event) => menu.current.toggle(event)} />
             </div>
         )
     } else {

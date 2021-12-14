@@ -55,3 +55,7 @@ LOGIN
 .p-submenu-list{
     left: -100% !important;
 }
+
+.login-button-name-label{
+    color: white;
+}

@@ -18,7 +18,7 @@ export default function RacketEdit() {
                 image="src/resources/images/raquetabab.jpg"
             />
             <CardContent >
-                <Typography className={"info-card-title"} variant="body2" color="text.secondary">
+                <Typography className={"info-card-title-2"} variant="body2" color="text.secondary">
                     Raqueta Babolat Pure Aero 100
                 </Typography>
             </CardContent>
@@ -37,7 +37,7 @@ export default function RacketEdit() {
                     image="src/resources/images/raquetabab.jpg"
                 />
                 <CardContent >
-                    <Typography className={"info-card-title"} variant="body2" color="text.secondary">
+                    <Typography className={"info-card-title-2"} variant="body2" color="text.secondary">
                         Raqueta De Tenis Wilson Blade Sw 104 Autograph V7.0
                     </Typography>
                 </CardContent>

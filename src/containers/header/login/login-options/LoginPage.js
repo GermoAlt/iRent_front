@@ -31,8 +31,20 @@ const LoginPage = (props) => {
     }
 
     const handleSuccessfulLogin = (response) => {
-        changeUser(response)
-        localStorage.setItem('user', JSON.stringify(response))
+        let user = {}
+        if(username.substring(0,1) === "a"){
+            user = {
+                name: "Ana",
+                tipo: "instructor"
+            }
+        } else {
+            user = {
+                name: "Pedro",
+                tipo: "cliente"
+            }
+        }
+        changeUser(user)
+        localStorage.setItem('user', JSON.stringify(user))
         setError(false);
         props.ocultar();
     }

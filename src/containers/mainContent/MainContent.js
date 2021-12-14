@@ -14,6 +14,7 @@ import "./mainContent.css"
 import Banner from "../../components/banner/Banner";
 import SearchPanel from "./homePage/searchPanel/SearchPanel";
 import OrderSuccessful from "./checkout/OrderSuccessful";
+import RacketEdit from "./packages/RacketEdit";
 
 export default function MainContent(props){
  return (
@@ -36,7 +37,8 @@ export default function MainContent(props){
                <Route path="/producto/:id"component={ProductDetails}/>
                <Route exact path="/perfil" component={UserProfile}/>
                <Route path="/detallePaquete/:id" component={PackageDetails}/>
-               <Route path={"/ordenExitosa"} component={    OrderSuccessful} />
+               <Route path={"/ordenExitosa"} component={OrderSuccessful} />
+               <Route path={"/editarPaquete"} component={RacketEdit} />
 
                <Redirect to={"/"} />
            </Switch>

@@ -37,7 +37,7 @@ export default function PackageDetails(){
                             {packageData.ubicacion}
                         </div>
                         <div>
-                            {packageData.price}
+                            ${packageData.price}
                         </div>
                     </div>
                     <div className={"bbbbb"}>
@@ -79,7 +79,7 @@ export default function PackageDetails(){
                         <div>Raqueta Wilson Agile</div>
                         <div className={"line-separator-small"}/>
                         <div className={"edicion-articulo-preseleccionado"}>
-                            <Button label={"Editar"}/>
+                            <Button label={"Editar"} onClick={() => {history.push("/editarPaquete")}}/>
                             <Button label={"Eliminar"}/>
                         </div>
                     </div>

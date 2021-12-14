@@ -13,12 +13,15 @@ import articulosJson from '../../resources/json/products.json';
 import logo from '../../resources/images/logoSportX.svg';
 import Login from "./login/Login";
 import { CartContext } from '../../contexts/CartContext';
+import useUser from "../../hooks/useUser";
 
 
 export default function Header(props) {
     const [carritoCantidad] = useContext(CartContext)
 
     const [globalFilter, setGlobalFilter] = useState(null);
+
+    const {user, setUser} = useUser()
 
     const menuItemTemplate = (icon, path, item, options) => {
         return (
@@ -99,9 +102,11 @@ export default function Header(props) {
             <Link to={"/instructor/nuevo"}style={{textDecoration: 'none'}}>
                 <Button label={"Publicar"} icon="pi pi-plus" className="p-button-rounded p-mr-20"style={{textDecoration: 'none'}}/>
             </Link>
-            <Link to={"/experienciasPendientes"}style={{textDecoration: 'none'}}>
-                <Button label={"Mis alquileres"} icon="pi pi-calendar" className="p-button-rounded p-mr-20" />
-            </Link>
+            {user.tipo && user.tipo === "instructor" ?
+                <Link to={"/experienciasPendientes"}style={{textDecoration: 'none'}}>
+                    <Button label={"Mis alquileres"} icon="pi pi-calendar" className="p-button-rounded p-mr-20" />
+                </Link>
+            : null}
             <Login/>
         </React.Fragment>
     );

@@ -10,7 +10,7 @@ import { Button } from 'primereact/button';
 import {Link, Redirect} from 'react-router-dom'
 import classNames from "classnames";
 import articulosJson from '../../resources/json/products.json';
-import logo from '../../resources/images/newLogo.png';
+import logo from '../../resources/images/logoSportX.svg';
 import Login from "./login/Login";
 import { CartContext } from '../../contexts/CartContext';
 
@@ -88,27 +88,19 @@ export default function Header(props) {
     const leftContents = (
         <React.Fragment>
             <Link to={"/"}>
-                <img src={logo} className='logo' alt='Webquill'/>
+                <img src={logo} className='logo'/>
             </Link>
         </React.Fragment>
     );
 
-    // const leftContents = (
-    //     <React.Fragment >
-    //         <MegaMenu className="menu-categorias">
-    //             <Menubar className={"menu-categorias-content"} model={menuCategories} />
-    //         </MegaMenu>
-    //         <Login/>
-    //     </React.Fragment>
-    // )
 
     const rightContents = (
         <React.Fragment>
             <Link to={"/instructor/nuevo"}style={{textDecoration: 'none'}}>
-                <Button label={"Publicar"} icon="pi pi-plus" className="p-button-rounded p-mr-20"style={{backgroundColor: "#775094", textDecoration: 'none'}}/>
+                <Button label={"Publicar"} icon="pi pi-plus" className="p-button-rounded p-mr-20"style={{textDecoration: 'none'}}/>
             </Link>
-            <Link to={"experienciasPendientes"}style={{textDecoration: 'none'}}>
-                <Button label={"Mis alquileres"} icon="pi pi-calendar" className="p-button-rounded p-mr-20" style={{backgroundColor: "#775094"}}/>
+            <Link to={"/experienciasPendientes"}style={{textDecoration: 'none'}}>
+                <Button label={"Mis alquileres"} icon="pi pi-calendar" className="p-button-rounded p-mr-20" />
             </Link>
             <Login/>
         </React.Fragment>

@@ -4,7 +4,7 @@ import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
 import {Rating} from "primereact/rating";
-import ScrollToTop from "../../../components/ScrollToTop";
+import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
 
 var data = require('./PackageData.json')
 

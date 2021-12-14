@@ -16,12 +16,13 @@ import { Provider as CartProvider } from './contexts/CartContext'
 import {UserProvider} from './contexts/UserContext'
 import {CloudinaryContext} from "cloudinary-react";
 import Footer from "./containers/footer/footer";
+import background from "./resources/images/background.png"
 
 export default function App() {
 
     PrimeReact.ripple = true;
   return (
-      <div className="App">
+      <div className="App" style={{backgroundImage: `url(${background})`}}>
           <CloudinaryContext cloudName={"remote-german"} secure={true}>
               <CartProvider>
                   <UserProvider>

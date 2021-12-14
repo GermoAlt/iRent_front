@@ -9,6 +9,7 @@
 .button-panel-element{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-size: 24px;
     gap: 25px;
     width: 300px;

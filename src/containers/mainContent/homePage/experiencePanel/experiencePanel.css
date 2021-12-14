@@ -45,6 +45,22 @@
 }
 
 .experience-image{
+    border-radius: 15px;
+}
 
-    z-index: -1;
+.experience-image:hover{
+    -webkit-transition : -webkit-filter 100ms linear;
+    filter: brightness(110%);
+    border-radius: 15px;
+}
+
+.tarjeta-experience-panel{
+    border-radius: 15px;
+    height: 410px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.tarjeta-experience-panel:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }

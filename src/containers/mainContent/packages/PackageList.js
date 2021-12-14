@@ -6,7 +6,7 @@ import "./packageList.css"
 import SearchPanel from "../homePage/searchPanel/SearchPanel";
 import {Image, Transformation} from "cloudinary-react";
 import {Link} from "react-router-dom";
-import ScrollToTop from "../../../components/ScrollToTop";
+import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
 
 var data = require('./PackageData.json')
 

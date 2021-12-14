@@ -6,6 +6,7 @@ import "./packageList.css"
 import SearchPanel from "../homePage/searchPanel/SearchPanel";
 import {Image, Transformation} from "cloudinary-react";
 import {Link} from "react-router-dom";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 var data = require('./PackageData.json')
 
@@ -23,6 +24,7 @@ export default function PackageList(props){
     const itemTemplate = (data) => {
         return (
             <div className="product-item">
+                <ScrollToTop/>
                 <Image publicId={"Seminario/" + data.image}>
                     <Transformation width="150" height="150" radius="max" crop="fill" />
                 </Image>
@@ -57,7 +59,7 @@ export default function PackageList(props){
 
     return (
         <div>
-            <SearchPanel/>
+
             <div className={"experience-package-list"}>
                 <div className={"package-list-filter-panel"}>
                     <span>Filtros</span>

@@ -4,6 +4,7 @@ import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
 import {Rating} from "primereact/rating";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 var data = require('./PackageData.json')
 
@@ -13,6 +14,7 @@ export default function PackageDetails(){
     const image_size = 75
     return (
         <div className={"card package-data-container"}>
+            <ScrollToTop/>
             <div className={"package-data-panel-superior"}>
                 <div className={"package-data-panel-superior-izq"}>
                     <Image publicId={"Seminario/" + packageData.image}/>

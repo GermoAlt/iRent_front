@@ -18,10 +18,11 @@ export default function HomePage() {
                     <div className={"button-panel-element-image"}>
                         <Image publicId={"Seminario/icono_experiencia"}>
                             <Transformation width={image_size} height={image_size} crop={"scale"}/>
+                            <Transformation effect="colorize:100" color="#c56de0" />
                         </Image>
                     </div>
                     <div className={"button-panel-element-text"}>
-                        <strong>Viví nuevas experiencias</strong> <br/>
+                        <strong className={"texto-prueba"}>Viví nuevas experiencias</strong> <br/>
                         Seleccioná el deporte que quieras probar y nos encargamos del resto
                     </div>
                     <div className={"button-panel-element-button"}>

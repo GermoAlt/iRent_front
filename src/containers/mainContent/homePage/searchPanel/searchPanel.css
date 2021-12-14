@@ -33,13 +33,12 @@
     margin: 10px;
     font-weight: lighter;
     color: white;
-    text-shadow: 3px 3px 3px #C71FE9;
+    text-shadow: 4px 4px 3px #C71FE9;
     font-family: "Bebas Neue", cursive;
 }
 
 
 .panel-busqueda-titulo > span {
-    text-shadow: 3px 3px 3px #05B5FF;
     /*color: #05B5FF;*/
 }
 

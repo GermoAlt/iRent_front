@@ -86,8 +86,7 @@ export default function PackageList(props){
                 <div className={"package-list-results datascroller-demo"}>
                     <div className={"card"}>
                         <DataScroller value={listaProductos} itemTemplate={itemTemplate}
-                                      rows={5} inline scrollHeight="500px"
-                                      header="Paquetes" />
+                                      rows={5} inline scrollHeight="500px" />
                     </div>
                 </div>
             </div>

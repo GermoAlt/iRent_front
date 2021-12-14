@@ -1,7 +1,33 @@
 .banner-container{
     width: 100vw;
-    background-image: url("https://images.squarespace-cdn.com/content/v1/5568a665e4b01bef57911013/1438809545918-NBBI9DN1LTG09T6IWHDU/racket-and-ball.jpg?format=1500w");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner-titulo{
+    text-align: center;
+    font-size: 125px;
+    margin: 10px;
+    font-weight: lighter;
+    color: white;
+    text-shadow: 4px 4px 3px #C71FE9;
+    font-family: "Bebas Neue", cursive;
+}
+
+.banner-descripcion{
+    text-align: center;
+    font-size: 60px;
+    margin: 10px;
+    font-weight: lighter;
+    color: white;
+    text-shadow: 3px 3px 3px #05B5FF;
+    font-family: "Bebas Neue", cursive;
+}
+
+.foto-banner-panel-instructor{
+    background-position: center;
 }

@@ -12,12 +12,17 @@ export default function PackageDetails(){
     const id = useParams().id
     const packageData = data.filter(x => x.id === id)[0]
     const image_size = 75
+
+    const submit = () => {
+        
+    }
+
     return (
         <div className={"card package-data-container"}>
             <ScrollToTop/>
             <div className={"package-data-panel-superior"}>
                 <div className={"package-data-panel-superior-izq"}>
-                    <Image publicId={"Seminario/" + packageData.image}/>
+                    <Image publicId={"Seminario/" + packageData.image} className={"package-data-panel-superior-izq-imagen"}/>
                 </div>
                 <div className={"package-data-panel-superior-der"}>
                     <div className={"card package-info-card"}>
@@ -52,7 +57,7 @@ export default function PackageDetails(){
                             </div>
                         </div>
                         <div>
-                            <Button label={"Confirmar"}/>
+                            <Button label={"Confirmar"} onClick={() => {submit()}}/>
                         </div>
                     </div>
                 </div>

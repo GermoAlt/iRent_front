@@ -4,6 +4,16 @@
   text-align: center;
   min-height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-panel-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .p-scrolltop{

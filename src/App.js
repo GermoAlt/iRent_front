@@ -23,14 +23,16 @@ export default function App() {
     PrimeReact.ripple = true;
   return (
       <div className="App" style={{backgroundImage: `url(${background})`}}>
-          <CloudinaryContext cloudName={"remote-german"} secure={true}>
+          <CloudinaryContext cloudName={"remote-german"} secure={true} className={"main-panel-container"}>
               <CartProvider>
                   <UserProvider>
                       <Router>
                           <ScrollTop/>
                           <Header/>
-                          <MainContent/>
-                          <Footer/>
+                          <div className={"main-panel-container"}>
+                              <MainContent />
+                              <Footer/>
+                          </div>
                     </Router>
                 </UserProvider>
               </CartProvider>

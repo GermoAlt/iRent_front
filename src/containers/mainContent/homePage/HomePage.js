@@ -12,16 +12,16 @@ export default function HomePage() {
 
     return (
         <div className={"home-page"}>
-            <SearchPanel/>
             <div className={"home-page-button-panel"}>
-                <div className={"button-panel-element"}>
+                <div className={"button-panel-element card"}>
                     <div className={"button-panel-element-image"}>
                         <Image publicId={"Seminario/icono_experiencia"}>
                             <Transformation width={image_size} height={image_size} crop={"scale"}/>
+                            <Transformation effect="colorize:100" color="#C71FE9" />
                         </Image>
                     </div>
                     <div className={"button-panel-element-text"}>
-                        <strong>Viví nuevas experiencias</strong> <br/>
+                        <strong className={"texto-prueba"}>Viví nuevas experiencias</strong> <br/>
                         Seleccioná el deporte que quieras probar y nos encargamos del resto
                     </div>
                     <div className={"button-panel-element-button"}>
@@ -30,10 +30,11 @@ export default function HomePage() {
                         </LinkScroll>
                     </div>
                 </div>
-                <div className={"button-panel-element"}>
+                <div className={"button-panel-element card"}>
                     <div className={"button-panel-element-image"}>
                         <Image publicId={"Seminario/icono_articulo"}>
                             <Transformation width={image_size} height={image_size} crop={"scale"}/>
+                            <Transformation effect="colorize:100" color="#C71FE9" />
                         </Image>
                     </div>
                     <div className={"button-panel-element-text"}>
@@ -44,10 +45,11 @@ export default function HomePage() {
                         <Button label={"PUBLICAR ARTICULO"}/>
                     </div>
                 </div>
-                <div className={"button-panel-element"}>
+                <div className={"button-panel-element card"}>
                     <div className={"button-panel-element-image"}>
                         <Image publicId={"Seminario/icono_instructor"}>
                             <Transformation width={image_size} height={image_size} crop={"scale"}/>
+                            <Transformation effect="colorize:100" color="#C71FE9" />
                         </Image>
                     </div>
                     <div className={"button-panel-element-text"}>

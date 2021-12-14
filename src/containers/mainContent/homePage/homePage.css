@@ -9,7 +9,16 @@
 .button-panel-element{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-size: 24px;
     gap: 25px;
     width: 300px;
+    margin-bottom: 0 !important;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.button-panel-element:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }

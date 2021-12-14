@@ -1,0 +1,56 @@
+.order-successful-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+    margin-bottom: 0 !important;
+    border-radius: 15px;
+}
+
+.order-successful-aux{
+    border-radius: 15px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+    padding: 5px;
+
+    background-size: 400% 400%;
+    background: linear-gradient(268deg, #c71fe9, #05b5ff) no-repeat;
+    -webkit-animation: order-successful-animation 2s ease infinite;
+    -moz-animation: order-successful-animation 2s ease infinite;
+    -o-animation: order-successful-animation 2s ease infinite;
+    animation: order-successful-animation 2s ease infinite;
+}
+
+.order-successful-title{
+    font-family: "Bebas Neue", cursive;
+    font-size: 64px;
+}
+
+.order-successful-text{
+    font-size: 24px;
+}
+
+
+@-webkit-keyframes order-successful-animation {
+    0%{background-position:0% 20%}
+    50%{background-position:100% 81%}
+    100%{background-position:0% 20%}
+}
+@-moz-keyframes order-successful-animation {
+    0%{background-position:0% 20%}
+    50%{background-position:100% 81%}
+    100%{background-position:0% 20%}
+}
+@-o-keyframes order-successful-animation {
+    0%{background-position:0% 20%}
+    50%{background-position:100% 81%}
+    100%{background-position:0% 20%}
+}
+@keyframes order-successful-animation {
+    0%{background-position:0% 20%}
+    50%{background-position:100% 81%}
+    100%{background-position:0% 20%}
+}

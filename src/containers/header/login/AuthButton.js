@@ -97,14 +97,14 @@ const AuthButton = props => {
         return (
             <div>
                 <TieredMenu model={items} className={"pull-left"} popup ref={menu} />
-                <Button className="p-button-rounded p-button-text p-mr-2" style={{backgroundColor: "#775094"}} onClick={(event) => menu.current.toggle(event)}>
+                <Button className="p-button-rounded p-button-text p-mr-2" style={{backgroundColor: "#C71FE9"}} onClick={(event) => menu.current.toggle(event)}>
                     <Avatar label={"P"} shape={"circle"} className={"p-mr-2"} />
                     <span className={"login-button-name-label"}>Hola {user.name ? user.name : ""}</span>
                 </Button>
             </div>
         )
     } else {
-        return <Button label="Login" icon="pi pi-user" className="p-button-rounded p-mr-2" style={{backgroundColor: "#775094"}} onClick={() => props.onClick('displayBasic')} />
+        return <Button label="Login" icon="pi pi-user" className="p-button-rounded p-mr-2" style={{backgroundColor: "#C71FE9"}} onClick={() => props.onClick('displayBasic')} />
     }
 }
 

@@ -1,10 +1,10 @@
 import React from "react";
-import {useParams} from "react-router-dom";
+import {Redirect, useHistory, useParams} from "react-router-dom";
 import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
 import {Rating} from "primereact/rating";
-import RacketEdit from "./RacketEdit"
+import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
 
 var data = require('./PackageData.json')
 
@@ -12,11 +12,18 @@ export default function PackageDetails(){
     const id = useParams().id
     const packageData = data.filter(x => x.id === id)[0]
     const image_size = 75
+    let history = useHistory()
+
+    const submit = () => {
+        history.push("/ordenExitosa")
+    }
+
     return (
         <div className={"card package-data-container"}>
+            <ScrollToTop/>
             <div className={"package-data-panel-superior"}>
                 <div className={"package-data-panel-superior-izq"}>
-                    <Image publicId={"Seminario/" + packageData.image}/>
+                    <Image publicId={"Seminario/" + packageData.image} className={"package-data-panel-superior-izq-imagen"}/>
                 </div>
                 <div className={"package-data-panel-superior-der"}>
                     <div className={"card package-info-card"}>
@@ -51,7 +58,7 @@ export default function PackageDetails(){
                             </div>
                         </div>
                         <div>
-                            <Button label={"Confirmar"}/>
+                            <Button label={"Confirmar"} onClick={() => {submit()}}/>
                         </div>
                     </div>
                 </div>

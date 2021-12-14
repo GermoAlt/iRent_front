@@ -53,7 +53,6 @@ export default function InstructorPanel(props){
 
     return (
         <div className={"instructor-panel-container"}>
-            <span className={"instructor-panel-container-title"}>Búsquedas abiertas</span>
             <div className={"experience-package-list"}>
                 <div className={"instructor-filter-panel"}>
                     <Accordion multiple>
@@ -104,8 +103,7 @@ export default function InstructorPanel(props){
                 <div className={"package-list-results datascroller-demo"}>
                     <div className={"card"}>
                         <DataScroller value={listaProductos} itemTemplate={itemTemplate}
-                                      rows={5} inline scrollHeight="579px"
-                                      header="Paquetes" />
+                                      rows={5} inline scrollHeight="579px"/>
                     </div>
                 </div>
             </div>

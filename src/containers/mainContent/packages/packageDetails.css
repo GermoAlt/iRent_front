@@ -9,6 +9,12 @@
     gap: 75px
 }
 
+.package-data-panel-superior-izq-imagen{
+    border-radius: 15px;
+    height: 410px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
 .package-data-panel-superior-der{
     display: flex;
     flex-direction: column;
@@ -16,7 +22,7 @@
 
 .package-info-includes{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     gap: 25px
 }
@@ -42,7 +48,7 @@
 
 .bbbbb{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 50px
 }
 

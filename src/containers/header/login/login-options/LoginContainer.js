@@ -1,4 +1,4 @@
-import logo from "../../../../resources/images/newLogo.png";
+import logo from "../../../../resources/images/logoSportX.svg";
 import {InputText} from "primereact/inputtext";
 import {Link} from "react-router-dom";
 import React from "react";
@@ -9,7 +9,7 @@ const LoginContainer = (props) => {
     if (props.actionType == "register") {
         return (
             <div className={"login-dialog-content-container"}>
-                <img src={logo} className='login-dialog-logo' alt='Webquill'/>
+                <svg src={logo} className='login-dialog-logo' alt='Webquill'/>
                 <div className={"login-dialog-header-text"}>
                     <h2>Crear cuenta</h2>
                 </div>

@@ -22,6 +22,10 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import MisArticulos from "./MisArticulos";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+import './userProfile.css'
+import MisExperienciasPrevias from "./MisExperienciasPrevias";
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -30,27 +34,26 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-const SideMenu = ({setId}) => {
+const SideMenu = ({id,setId}) => {
     const menu = [
-    {item:'Mis datos personales', id:1, estaSeleccionado:false},
-    {item:'Mis direcciones', id:2, estaSeleccionado:false},
-    {item:'Metodos de pago', id:3, estaSeleccionado:false},
-    {item:'Mis experiencias previas', id:4, estaSeleccionado:false},
-    {item:'Mis articulos publicados', id:5, estaSeleccionado:true},
-    {item:'Mis servicios publicados', id:6, estaSeleccionado:false}
+    {item:'Mis datos personales', id:1},
+    {item:'Mis direcciones', id:2},
+    {item:'Metodos de pago', id:3},
+    {item:'Mis experiencias previas', id:4},
+    {item:'Mis articulos publicados', id:5},
+    {item:'Mis servicios publicados', id:6}
     ]
 
     const handleClick=(id)=> {
         setId(id)
-        menu[id].estaSeleccionado= true;
     }
 
     return(
         <List>
             {menu.map((menuItem)=> (
-                <ListItem onClick={()=>handleClick(menuItem.id)} button key={menuItem.id} sx={{backgroundColor: menuItem.estaSeleccionado?"#A183BC":"", height: "60px",border: 1, borderColor: 'grey.500'}}>
+                <ListItem className={"listItem"} onClick={()=>handleClick(menuItem.id)} button key={menuItem.id} sx={{backgroundColor: id===menuItem.id?"#A183BC":"", height: "60px",border: 1, borderColor: 'grey.500'}}>
                     <ListItemIcon style={{color: "#3E3D3D", fontWeight: "bold"}}>
-
+                        <ArrowForwardIosIcon/>
                     </ListItemIcon>
                     <Typography style={{color: "#2C2C2C", fontWeight: "bold"}}>
                         {menuItem.item}
@@ -174,6 +177,32 @@ const UserProfile = () => {
         data.forEach(method => generateTab(method));
     }
 
+    const getCurrentTab = (id) => {
+        switch(id) {
+            case 1:
+                return <div>Mis datos Personales</div>
+                break;
+            case 2:
+                return <div>Mis direcciones</div>
+                break;
+            case 3:
+                return <div>Metodos de Pago</div>
+                break;
+            case 4:
+                return <MisExperienciasPrevias />
+                break;
+            case 5:
+                return <MisArticulos />
+                break;
+            case 6:
+                return <div>Mis servicios Publicados</div>
+                break;
+            default:
+                return <div> No se ha podido visualizar contenido </div>;
+                break;
+        }
+    }
+
     return(
         <div className={"userProfile"}>
             {/*<UserInformationPanel></UserInformationPanel>*/}
@@ -187,12 +216,12 @@ const UserProfile = () => {
                     <Divider />
                     <Grid item xs={4} sx={{ border: 0 }}>
                         <Item style={{color: "#3E3D3D"}}>
-                            <SideMenu setId={(value)=>setId(value)}/>
+                            <SideMenu id={id} setId={(value)=>setId(value)}/>
                         </Item>
                     </Grid>
                     <Grid item xs={8} sx={{ border: 0 }}>
                         <Item>
-                            <MisArticulos />
+                            {getCurrentTab(id)}
                         </Item>
                     </Grid>
                 </Grid>

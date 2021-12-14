@@ -6,3 +6,7 @@
     width:30%;
     margin: auto;
 }
+
+.listItem :hover {
+    backgroundColor: #A183BC;
+}

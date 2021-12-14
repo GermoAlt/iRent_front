@@ -10,25 +10,37 @@ import UserProfile from "./userProfile/UserProfile";
 import PackageList from "./packages/PackageList";
 import InstructorPanel from "./instructor/InstructorPanel";
 import PackageDetails from "./packages/PackageDetails";
-import RacketEdit from "./packages/RacketEdit";
+import "./mainContent.css"
+import Banner from "../../components/banner/Banner";
+import SearchPanel from "./homePage/searchPanel/SearchPanel";
+import OrderSuccessful from "./checkout/OrderSuccessful";
 
 export default function MainContent(props){
  return (
-   <div className={"mainContent"}>
-       <Switch>
-           <Route exact path="/" component={HomePage}/>
-           <Route path={"/experiencias/:deporte"} component={PackageList}/>
-           <Route path={"/experienciasPendientes"} component={InstructorPanel}/>
-           <Route path="/transacciones" component={TransactionLog}/>
-           <Route path="/gestionProductos" component={ProductPanel}/>
-           <Route path="/carrito" component={Carrito}/>
-           <Route path="/producto/:id"component={ProductDetails}/>
-           <Route exact path="/perfil" component={UserProfile}/>
-           <Route path="/detallePaquete/:id" component={PackageDetails}/>
-           <Route path="/editarRaqueta/" component={RacketEdit}/>
+    <div>
+        <div className={"top_panel_banner"}>
+            <Switch>
+                <Route exact path={"/"} component={SearchPanel}/>
+                <Route path={"/experiencias/:deporte"} component={Banner}/>
+                <Route path={"/experienciasPendientes"} component={Banner}/>
+            </Switch>
+        </div>
+        <div className={"mainContent"}>
+           <Switch>
+               <Route exact path="/" component={HomePage}/>
+               <Route path={"/experiencias/:deporte"} component={PackageList}/>
+               <Route path={"/experienciasPendientes"} component={InstructorPanel}/>
+               <Route path="/transacciones" component={TransactionLog}/>
+               <Route path="/gestionProductos" component={ProductPanel}/>
+               <Route path="/carrito" component={Carrito}/>
+               <Route path="/producto/:id"component={ProductDetails}/>
+               <Route exact path="/perfil" component={UserProfile}/>
+               <Route path="/detallePaquete/:id" component={PackageDetails}/>
+               <Route path={"/ordenExitosa"} component={    OrderSuccessful} />
 
-           <Redirect to={"/"} />
-       </Switch>
-   </div>
+               <Redirect to={"/"} />
+           </Switch>
+        </div>
+     </div>
  );
 }

@@ -7,6 +7,7 @@ HEADER
     width: 100%;
     flex-direction:column;
     justify-content: flex-end;
+    background: #2B1E35;
 }
 
 .p-tabmenu-nav{
@@ -24,9 +25,8 @@ HEADER
 }
 
 .logo{
-    max-height: 3em;
-    margin-top: 10px ;
-    margin-bottom: 10px ;
+    width: 12em;
+    margin-top: 5px ;
 }
 
 .searchbar-container{
@@ -49,6 +49,7 @@ HEADER
 
 .p-toolbar {
     padding: 0px !important;
+    background: black;
 }
 
 .p-toolbar-group-left{

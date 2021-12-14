@@ -21,7 +21,7 @@ const generarCardsExperiencias = () => {
 
 const generarCard = (element) => {
     return (
-        <div key={element.id}>
+        <div key={element.id} className={"tarjeta-experience-panel"}>
             <Link to={"/experiencias/" + element.id}>
                 <Image publicId={"Seminario/" + element.id} className={"experience-image"}>
                     <Transformation width="325" height="410" crop={"scale"}/>

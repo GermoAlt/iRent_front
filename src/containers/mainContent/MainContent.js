@@ -20,8 +20,9 @@ export default function MainContent(props){
         <div className={"top_panel_banner"}>
             <Switch>
                 <Route exact path={"/"} component={SearchPanel}/>
+                <Route path={"/experiencias/:deporte"} component={Banner}/>
+                <Route path={"/experienciasPendientes"} component={Banner}/>
             </Switch>
-            <Banner />
         </div>
         <div className={"mainContent"}>
            <Switch>

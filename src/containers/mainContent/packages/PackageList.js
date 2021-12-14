@@ -62,7 +62,6 @@ export default function PackageList(props){
 
             <div className={"experience-package-list"}>
                 <div className={"package-list-filter-panel"}>
-                    <span>Filtros</span>
                     <Accordion multiple>
                         <AccordionTab header={"Relevancia"}>
 

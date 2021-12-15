@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import {Redirect, useHistory, useParams} from "react-router-dom";
 import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
 import {Rating} from "primereact/rating";
 import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
-import { saveAs } from "file-saver";
+import {Calendar} from "primereact/calendar";
 
 var data = require('./PackageData.json')
 
 export default function PackageDetails(){
     const id = useParams().id
     const packageData = data.filter(x => x.id === id)[0]
+    const [ fecha, setFecha ] = useState(new Date())
     const image_size = 75
     let history = useHistory()
+
 
     const submit = (paquete) => {
         let paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
@@ -21,6 +23,30 @@ export default function PackageDetails(){
         localStorage.setItem("paquetes",JSON.stringify(paquetes));
         history.push("/ordenExitosa")
     }
+
+    let fechasReservadas = [
+        new Date(2021, 11, 1),
+        new Date(2021, 11, 2),
+        new Date(2021, 11, 3),
+        new Date(2021, 11, 4),
+        new Date(2021, 11, 5),
+        new Date(2021, 11, 6),
+        new Date(2021, 11, 7),
+        new Date(2021, 11, 8),
+        new Date(2021, 11, 9),
+        new Date(2021, 11, 10),
+        new Date(2021, 11, 11),
+        new Date(2021, 11, 12),
+        new Date(2021, 11, 13),
+        new Date(2021, 11, 14),
+        new Date(2021, 11, 15),
+        new Date(2021, 11, 16),
+        new Date(2021, 11, 17),
+        new Date(2021, 11, 23),
+        new Date(2021, 11, 24),
+        new Date(2021, 11, 25),
+    ]
+
 
     return (
         <div className={"card package-data-container"}>
@@ -61,8 +87,12 @@ export default function PackageDetails(){
                                 </Image>
                             </div>
                         </div>
-                        <div>
-                            <Button label={"Confirmar"} onClick={() => submit(packageData)}/>
+
+                        <div className={""}>
+                            <Calendar showIcon dateFormat={"mm/mm/yy"}
+                                      value={fecha} onChange={(e) => {setFecha(e.value)}}
+                                      disabledDates={fechasReservadas} />
+                            <Button label={"Confirmar"} onClick={() => {submit(packageData)}}/>
                         </div>
                     </div>
                 </div>

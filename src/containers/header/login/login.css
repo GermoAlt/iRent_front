@@ -59,3 +59,7 @@ LOGIN
 .login-button-name-label{
     color: white;
 }
+
+.p-button.button-login{
+    background:#C71FE9 !important;
+}

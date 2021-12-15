@@ -19,6 +19,8 @@ export default function PackageDetails(){
 
     const submit = (paquete) => {
         let paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+        paquete.fecha = ""+fecha.getDate()+"/"+(fecha.getMonth()+1)
+        paquete.code += Math.random() * 1000
         paquetes.push(paquete);
         localStorage.setItem("paquetes",JSON.stringify(paquetes));
         history.push("/ordenExitosa")
@@ -89,9 +91,9 @@ export default function PackageDetails(){
                         </div>
 
                         <div className={""}>
-                            <Calendar showIcon dateFormat={"mm/mm/yy"}
+                            <Calendar showIcon dateFormat={"dd/mm/yy"}
                                       value={fecha} onChange={(e) => {setFecha(e.value)}}
-                                      disabledDates={fechasReservadas} />
+                                      disabledDates={fechasReservadas} readOnlyInput/>
                             <Button label={"Confirmar"} onClick={() => {submit(packageData)}}/>
                         </div>
                     </div>

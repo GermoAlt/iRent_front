@@ -12,7 +12,7 @@ var data = require('./PackageData.json')
 export default function PackageDetails(){
     const id = useParams().id
     const packageData = data.filter(x => x.id === id)[0]
-    const [ fecha, setFecha ] = useState(new Date())
+    const [ fecha, setFecha ] = useState(new Date(2021, 11, 18))
     const image_size = 75
     let history = useHistory()
     const [disabled, setDisabled] = useState(false)

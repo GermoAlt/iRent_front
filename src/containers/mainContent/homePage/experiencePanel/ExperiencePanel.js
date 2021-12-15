@@ -8,12 +8,12 @@ import {Link} from "react-router-dom";
 
 const generarCardsExperiencias = () => {
     var dict = [
-        {"id": "tenis",     "price": "6000", "description": "Tenis"},
-        {"id": "golf",      "price": "7000", "description": "Golf"},
-        {"id": "ciclismo",  "price": "6300", "description": "Ciclismo"},
-        {"id": "arqueria",  "price": "5900", "description": "Arquer\xc3\xada"},
-        {"id": "padel",     "price": "7050", "description": "Padel"},
-        {"id": "escalada ",  "price": "4000", "description": "Escalada"},
+        {"id": "tenis",     "price": "12500", "description": "Tenis"},
+        {"id": "golf",      "price": "17000", "description": "Golf"},
+        {"id": "ciclismo",  "price": "7300", "description": "Ciclismo"},
+        {"id": "arqueria",  "price": "15900", "description": "Arquer\xc3\xada"},
+        {"id": "padel",     "price": "17050", "description": "Padel"},
+        {"id": "escalada ",  "price": "14000", "description": "Escalada"},
     ]
 
     return dict.map(generarCard)

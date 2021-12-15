@@ -109,7 +109,7 @@ export default function InstructorPanel(props){
                 <div className={"package-list-results datascroller-demo"}>
                     <div className={"card"} >
                         <DataScroller value={listaProductos} itemTemplate={itemTemplate}
-                                      rows={5} inline scrollHeight="500px" />
+                                      rows={5} inline scrollHeight="500px" emptyMessage={"No hay paquetes disponibles en este momento"}/>
                     </div>
                 </div>
             </div>

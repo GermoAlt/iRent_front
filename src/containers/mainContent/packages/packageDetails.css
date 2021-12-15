@@ -11,7 +11,6 @@
 
 .package-data-panel-superior-izq-imagen{
     border-radius: 15px;
-    height: 410px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
     transition: 0.3s;
 }
@@ -37,8 +36,8 @@
 }
 
 .info-card-title{
-    font-family: VarsityTeam;
-    font-size: 35px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 50px;
 }
 
 .aaaaa{

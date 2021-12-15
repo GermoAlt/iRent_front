@@ -5,22 +5,26 @@
 
 .package-list-filter-panel{
     margin-right: 20px;
-    flex-grow: 1;
+    max-width: 250px;
+    flex: 1;
 }
 
 .package-list-results{
-    flex-grow: 1;
+    flex: 1;
 }
 
 .datascroller-demo .product-detail{
-    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* DataScrollerDemo.css */
 
 .datascroller-demo .product-name {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: "Bebas Neue", cursive;
+    font-size: 2.5rem;
 }
 
 .datascroller-demo .product-description {
@@ -39,7 +43,6 @@
 
 .datascroller-demo .product-item {
     display: flex;
-    align-items: center;
     padding: 1rem;
     width: 100%;
 }
@@ -49,9 +52,6 @@
     margin-right: 2rem;
 }
 
-.datascroller-demo .product-item .product-detail {
-    flex: 1 1 0;
-}
 
 .datascroller-demo .product-item .p-rating {
     margin: 0 0 .5rem 0;
@@ -61,7 +61,6 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: .5rem;
-    align-self: flex-end;
 }
 
 .datascroller-demo .product-item .product-action {

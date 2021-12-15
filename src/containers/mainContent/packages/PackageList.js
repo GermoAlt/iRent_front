@@ -3,10 +3,10 @@ import { Accordion, AccordionTab } from 'primereact/accordion';
 import { DataScroller } from 'primereact/datascroller';
 import { Button } from 'primereact/button';
 import "./packageList.css"
-import SearchPanel from "../homePage/searchPanel/SearchPanel";
 import {Image, Transformation} from "cloudinary-react";
 import {Link} from "react-router-dom";
 import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
+import {Tooltip} from "primereact/tooltip";
 
 var data = require('./PackageData.json')
 
@@ -24,27 +24,37 @@ export default function PackageList(props){
     const itemTemplate = (data) => {
         return (
             <div className="product-item">
-                <ScrollToTop/>
-                <Image publicId={"Seminario/" + data.image}>
-                    <Transformation width="150" height="150" radius="max" crop="fill" />
-                </Image>
+                <div className={"product-image"}>
+                    <Image publicId={"Seminario/" + data.image}>
+                        <Transformation width="150" height="150" radius="max" crop="fill" />
+                    </Image>
+                </div>
                 <div className="product-detail">
                     <div className="product-name">{data.name}</div>
-                    <div className="product-description">{data.fecha} - {data.cantidad} persona{data.cantidad !== 1 ? "s" : ""}</div>
                     <div className="product-description">{data.description}</div>
-                    <span className="product-price">${data.price}</span>
+                    <div className="product-price">${data.price}</div>
                 </div>
                 <div className="item-iconos-info">
                     <div className={"iconos-container"}>
-                        {data.incluyeArticulo ?
-                            <Image publicId={"Seminario/icono_articulo"} className={"card-icon"}>
+                        <Tooltip target={".tooltip-target"} tooltipOptions={{position: 'left'}}/>
+                        <span className={"tooltip-target"} data-pr-position="top" data-pr-tooltip={`${data.cantidad} persona${data.cantidad > 1 ? "s" : ""}`}>
+                            <Image publicId={`Seminario/personas_${data.cantidad}`} className={"card-icon"}>
                                 <Transformation width={image_size} height={image_size} crop={"scale"}/>
                             </Image>
+                        </span>
+                        {data.incluyeArticulo ?
+                            <span className={"tooltip-target"} data-pr-position="top" data-pr-tooltip={"Incluye artículos"} >
+                                <Image publicId={"Seminario/icono_articulo"} className={"card-icon"}>
+                                    <Transformation width={image_size} height={image_size} crop={"scale"}/>
+                                </Image>
+                            </span>
                             : null}
                         {data.incluyeCancha ?
-                            <Image publicId={"Seminario/cancha"} className={"card-icon"}>
-                                <Transformation width={image_size} height={image_size} crop={"scale"}/>
-                            </Image>
+                            <span className={"tooltip-target"} data-pr-position="top" data-pr-tooltip={"Incluye ubicación"} >
+                                <Image publicId={"Seminario/cancha"} className={"card-icon"}>
+                                    <Transformation width={image_size} height={image_size} crop={"scale"}/>
+                                </Image>
+                            </span>
                             : null}
                     </div>
                     <div className={"button-container"}>
@@ -59,7 +69,7 @@ export default function PackageList(props){
 
     return (
         <div>
-
+            <ScrollToTop/>
             <div className={"experience-package-list"}>
                 <div className={"package-list-filter-panel"}>
                     <Accordion multiple>
@@ -84,7 +94,7 @@ export default function PackageList(props){
                     </Accordion>
                 </div>
                 <div className={"package-list-results datascroller-demo"}>
-                    <div className={"card"}>
+                    <div className={"card"} >
                         <DataScroller value={listaProductos} itemTemplate={itemTemplate}
                                       rows={5} inline scrollHeight="500px" />
                     </div>

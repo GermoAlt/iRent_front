@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import data from "./paquetesComprados.json";
 import {Rating} from "primereact/rating";
 import {Button} from "primereact/button";
@@ -9,23 +9,29 @@ import {Image, Transformation} from "cloudinary-react";
 import {Checkbox} from "primereact/checkbox";
 import {Tooltip} from "primereact/tooltip";
 import {Link} from "react-router-dom";
+import { Toast } from 'primereact/toast';
 
 export default function InstructorPanel(props){
+    const toast = useRef(null);
     let paquetes = JSON.parse(localStorage.getItem("paquetes"))
     const [ listaProductos, setListaProductos] = useState(paquetes)
     const image_size = 500
 
 
     const handleAccept = (data) => {
+        toast.current.show({severity:'success', summary: 'Paquete aceptado!', detail:'Podrá ver los detalles en su perfil', life: 3000});
         setListaProductos(listaProductos.filter(function (e){
             return e.code !== data.code
         }))
+        localStorage.setItem("paquetes",JSON.stringify(listaProductos));
     }
 
     const handleIgnore = (data) => {
+        toast.current.show({severity:'error', summary: 'Paquete ignorado', detail:'Podrá ver los detalles en su perfil', life: 3000});
         setListaProductos(listaProductos.filter(function (e){
             return e.code !== data.code
         }))
+        localStorage.setItem("paquetes",JSON.stringify(listaProductos));
     }
 
     const itemTemplate = (data) => {
@@ -76,6 +82,7 @@ export default function InstructorPanel(props){
 
     return (
         <div className={"instructor-panel-container"}>
+            <Toast ref={toast} position={"bottom-right"}/>
             <div className={"experience-package-list"}>
                 <div className={"package-list-filter-panel"}>
                     <Accordion multiple>

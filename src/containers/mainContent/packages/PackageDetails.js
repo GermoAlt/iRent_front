@@ -15,15 +15,21 @@ export default function PackageDetails(){
     const [ fecha, setFecha ] = useState(new Date())
     const image_size = 75
     let history = useHistory()
+    const [disabled, setDisabled] = useState(false)
+    const [icono, setIcono] = useState("pi pi-check-circle")
 
 
     const submit = (paquete) => {
+        setIcono("pi pi-spin pi-spinner")
+        setDisabled(true)
         let paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
         paquete.fecha = ""+fecha.getDate()+"/"+(fecha.getMonth()+1)
         paquete.code += Math.random() * 1000
         paquetes.push(paquete);
         localStorage.setItem("paquetes",JSON.stringify(paquetes));
-        history.push("/ordenExitosa")
+        setTimeout(() => {
+            history.push("/ordenExitosa")
+        }, 1000)
     }
 
     let fechasReservadas = [
@@ -91,10 +97,10 @@ export default function PackageDetails(){
                         </div>
 
                         <div className={""}>
-                            <Calendar showIcon dateFormat={"dd/mm/yy"}
+                            <Calendar showIcon dateFormat={"dd/mm/yy"} style={{marginRight:"50px"}}
                                       value={fecha} onChange={(e) => {setFecha(e.value)}}
                                       disabledDates={fechasReservadas} readOnlyInput/>
-                            <Button label={"Confirmar"} onClick={() => {submit(packageData)}}/>
+                            <Button label={"Confirmar"} icon={icono} disabled={disabled} onClick={() => {submit(packageData)}}/>
                         </div>
                     </div>
                 </div>

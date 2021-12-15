@@ -34,7 +34,7 @@ const LoginPage = (props) => {
         let user = {}
         if(username.substring(0,1) === "a"){
             user = {
-                name: "Ana",
+                name: "",
                 tipo: "instructor"
             }
         } else {

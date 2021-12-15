@@ -99,14 +99,15 @@ export default function Header(props) {
 
     const rightContents = (
         <React.Fragment>
-            <Link to={"/instructor/nuevo"}style={{textDecoration: 'none'}}>
+            <Link to={"/instructor/nuevo"}>
                 <Button label={"Publicar"} icon="pi pi-plus" className="p-button-rounded p-mr-20"style={{textDecoration: 'none'}}/>
             </Link>
             {user.tipo && user.tipo === "instructor" ?
-                <Link to={"/experienciasPendientes"}style={{textDecoration: 'none'}}>
-                    <Button label={"Mis alquileres"} icon="pi pi-calendar" className="p-button-rounded p-mr-20" />
+                <Link to={"/experienciasPendientes"}>
+                    <Button label={"Paquetes abiertos"} icon="pi pi-calendar" className="p-button-rounded p-mr-20" />
                 </Link>
             : null}
+            <Button label={"Contacto"} icon="pi pi-comment" className="p-button-rounded p-mr-20" />
             <Login/>
         </React.Fragment>
     );

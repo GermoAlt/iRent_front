@@ -9,6 +9,7 @@ import {Image, Transformation} from "cloudinary-react";
 import {Checkbox} from "primereact/checkbox";
 
 export default function InstructorPanel(props){
+    let paquetes = JSON.parse(localStorage.getItem("paquetes"));
     const [ listaProductos, setListaProductos] = useState()
     // var packageData = data.filter(e => e.deporte === props.match.params.deporte)
     const image_size = 500
@@ -102,7 +103,7 @@ export default function InstructorPanel(props){
                 </div>
                 <div className={"package-list-results datascroller-demo"}>
                     <div className={"card"}>
-                        <DataScroller value={listaProductos} itemTemplate={itemTemplate}
+                        <DataScroller value={paquetes} itemTemplate={itemTemplate}
                                       rows={5} inline scrollHeight="579px"/>
                     </div>
                 </div>

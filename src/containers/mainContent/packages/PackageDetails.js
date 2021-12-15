@@ -5,6 +5,7 @@ import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
 import {Rating} from "primereact/rating";
 import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
+import { saveAs } from "file-saver";
 
 var data = require('./PackageData.json')
 
@@ -14,7 +15,10 @@ export default function PackageDetails(){
     const image_size = 75
     let history = useHistory()
 
-    const submit = () => {
+    const submit = (paquete) => {
+        let paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+        paquetes.push(paquete);
+        localStorage.setItem("paquetes",JSON.stringify(paquetes));
         history.push("/ordenExitosa")
     }
 
@@ -58,7 +62,7 @@ export default function PackageDetails(){
                             </div>
                         </div>
                         <div>
-                            <Button label={"Confirmar"} onClick={() => {submit()}}/>
+                            <Button label={"Confirmar"} onClick={() => submit(packageData)}/>
                         </div>
                     </div>
                 </div>

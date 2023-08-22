@@ -1,28 +1,18 @@
 import './header.css'
 
-import React, {useContext, useState} from "react";
-import { MegaMenu } from 'primereact/megamenu';
-import { Menubar } from 'primereact/menubar';
+import React from "react";
 import { Toolbar } from 'primereact/toolbar';
-import { InputText } from 'primereact/inputtext';
-import { Badge } from 'primereact/badge';
 import { Button } from 'primereact/button';
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import classNames from "classnames";
-import articulosJson from '../../resources/json/products.json';
 import logo from '../../resources/images/logoSportX.svg';
 import Login from "./login/Login";
-import { CartContext } from '../../contexts/CartContext';
 import useUser from "../../hooks/useUser";
 
 
-export default function Header(props) {
-    const [carritoCantidad] = useContext(CartContext)
+export default function Header() {
 
-    const [globalFilter, setGlobalFilter] = useState(null);
-
-    const {user, setUser} = useUser()
-
+    const {user, } = useUser()
     const menuItemTemplate = (icon, path, item, options) => {
         return (
             <li className={"p-menuitem"}>
@@ -32,10 +22,6 @@ export default function Header(props) {
                 </Link>
             </li>
         )
-    }
-
-    const redirect = (url) => {
-        return <Redirect to={url} />
     }
 
     const menuCategories = [
@@ -91,7 +77,7 @@ export default function Header(props) {
     const leftContents = (
         <React.Fragment>
             <Link to={"/"}>
-                <img src={logo} className='logo'/>
+                <img src={logo} className='logo' alt={""}/>
             </Link>
         </React.Fragment>
     );
@@ -115,7 +101,7 @@ export default function Header(props) {
 
     return (
         <div className="app-header p-d-flex">
-            <Toolbar left={leftContents} right={rightContents} />
+            <Toolbar start={leftContents} end={rightContents} />
         </div>
     );
 }

@@ -15,7 +15,6 @@ import articulosJson from '../../../resources/json/products.json';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import {Redirect} from "react-router";
 import useUser from "../../../hooks/useUser";
 
 const ProductPanel = (props) => {
@@ -281,10 +280,6 @@ const ProductPanel = (props) => {
             <Button label="Si" icon="pi pi-check" className="p-button-text" onClick={eliminarArticuloSeleccionado} />
         </div>
     );
-
-    if(user.tipo !== "admin"){
-        return <Redirect to={"/"}/>
-    }
 
     return (
 

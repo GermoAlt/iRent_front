@@ -3,8 +3,8 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import TransactionDialog from "./TransactionDialog";
 import Transactions from "../../../resources/json/transactions.json";
-import {Redirect} from "react-router";
 import useUser from "../../../hooks/useUser";
+import {useNavigate} from "react-router-dom";
 
 const detailsBodyTemplate = (rowdata) => {
     return (
@@ -17,8 +17,9 @@ const detailsBodyTemplate = (rowdata) => {
 export default function TransactionLog(props) {
     const [transactions] = useState(Transactions.data);
     const {user, changeUser} = useUser();
+    const navigate = useNavigate()
     if(user.tipo !== "admin"){
-        return <Redirect to={"/"}/>
+        navigate("/")
     }
     return (
         <div className={"transaction-log"}>

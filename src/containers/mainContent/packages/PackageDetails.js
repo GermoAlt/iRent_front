@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Redirect, useHistory, useParams} from "react-router-dom";
+import {useHistory, useNavigate, useParams} from "react-router-dom";
 import "./packageDetails.css"
 import {Image, Transformation} from "cloudinary-react";
 import {Button} from "primereact/button";
@@ -14,9 +14,9 @@ export default function PackageDetails(){
     const packageData = data.filter(x => x.id === id)[0]
     const [ fecha, setFecha ] = useState(new Date(2021, 11, 18))
     const image_size = 75
-    let history = useHistory()
     const [disabled, setDisabled] = useState(false)
     const [icono, setIcono] = useState("pi pi-check-circle")
+    const navigate = useNavigate()
 
 
     const submit = (paquete) => {
@@ -28,7 +28,7 @@ export default function PackageDetails(){
         paquetes.push(paquete);
         localStorage.setItem("paquetes",JSON.stringify(paquetes));
         setTimeout(() => {
-            history.push("/ordenExitosa")
+            navigate("/ordenExitosa")
         }, 1000)
     }
 
@@ -121,7 +121,7 @@ export default function PackageDetails(){
                         <div>Raqueta Wilson Agile</div>
                         <div className={"line-separator-small"}/>
                         <div className={"edicion-articulo-preseleccionado"}>
-                            <Button label={"Editar"} onClick={() => {history.push("/editarPaquete")}}/>
+                            <Button label={"Editar"} onClick={() => {navigate("/editarPaquete")}}/>
                             <Button label={"Eliminar"}/>
                         </div>
                     </div>

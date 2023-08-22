@@ -1,19 +1,12 @@
 import './userProfile.css'
-import { InputText } from 'primereact/inputtext'
-import { Button } from 'primereact/button'
-import {Redirect} from "react-router";
 import React, {useState} from "react";
 import useUser from "../../../hooks/useUser";
 import {Accordion, AccordionTab} from "primereact/accordion";
-import {Calendar} from "primereact/calendar";
-import UserInformationPanel from "./UserInformationPanel";
-import ResponsiveDrawer from "./Drawer";
 import {styled} from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
@@ -181,25 +174,18 @@ const UserProfile = () => {
         switch(id) {
             case 1:
                 return <div>Mis datos Personales</div>
-                break;
             case 2:
                 return <div>Mis direcciones</div>
-                break;
             case 3:
                 return <div>Metodos de Pago</div>
-                break;
             case 4:
                 return <MisExperienciasPrevias />
-                break;
             case 5:
                 return <MisArticulos />
-                break;
             case 6:
                 return <div>Mis servicios Publicados</div>
-                break;
             default:
                 return <div> No se ha podido visualizar contenido </div>;
-                break;
         }
     }
 

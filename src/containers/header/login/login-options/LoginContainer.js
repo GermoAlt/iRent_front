@@ -1,6 +1,5 @@
 import logo from "../../../../resources/images/logoSportX.svg";
 import {InputText} from "primereact/inputtext";
-import {Link} from "react-router-dom";
 import React from "react";
 import LoginPage from "./LoginPage";
 import RegisterUser from "./RegisterUser";

@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import {Redirect} from "react-router";
+import {Route, Routes} from "react-router-dom";
 import HomePage from "./homePage/HomePage";
 import TransactionLog from "./adminPanel/TransactionLog";
 import ProductPanel from "./adminPanel/ProductPanel";
@@ -16,32 +15,30 @@ import SearchPanel from "./homePage/searchPanel/SearchPanel";
 import OrderSuccessful from "./checkout/OrderSuccessful";
 import RacketEdit from "./packages/RacketEdit";
 
-export default function MainContent(props){
+export default function MainContent(){
  return (
     <div>
         <div className={"top_panel_banner"}>
-            <Switch>
-                <Route exact path={"/"} component={SearchPanel}/>
-                <Route path={"/experiencias/:deporte"} component={Banner}/>
-                <Route path={"/experienciasPendientes"} component={Banner}/>
-            </Switch>
+            <Routes>
+                <Route exact path={"/"} element={<SearchPanel />}/>
+                <Route path={"/experiencias/:deporte"} element={<Banner/>}/>
+                <Route path={"/experienciasPendientes"} element={<Banner/>}/>
+            </Routes>
         </div>
         <div className={"mainContent"}>
-           <Switch>
-               <Route exact path="/" component={HomePage}/>
-               <Route path={"/experiencias/:deporte"} component={PackageList}/>
-               <Route path={"/experienciasPendientes"} component={InstructorPanel}/>
-               <Route path="/transacciones" component={TransactionLog}/>
-               <Route path="/gestionProductos" component={ProductPanel}/>
-               <Route path="/carrito" component={Carrito}/>
-               <Route path="/producto/:id"component={ProductDetails}/>
-               <Route exact path="/perfil" component={UserProfile}/>
-               <Route path="/detallePaquete/:id" component={PackageDetails}/>
-               <Route path={"/ordenExitosa"} component={OrderSuccessful} />
-               <Route path={"/editarPaquete"} component={RacketEdit} />
-
-               <Redirect to={"/"} />
-           </Switch>
+           <Routes>
+               <Route exact path="/" element={<HomePage/>}/>
+               <Route path={"/experiencias/:deporte"} element={<PackageList/>}/>
+               <Route path={"/experienciasPendientes"} element={<InstructorPanel/>}/>
+               <Route path="/transacciones" element={<TransactionLog/>}/>
+               <Route path="/gestionProductos" element={<ProductPanel/>}/>
+               <Route path="/carrito" element={<Carrito/>}/>
+               <Route path="/producto/:id" element={<ProductDetails/>}/>
+               <Route exact path="/perfil" element={<UserProfile/>}/>
+               <Route path="/detallePaquete/:id" element={<PackageDetails/>}/>
+               <Route path={"/ordenExitosa"} element={<OrderSuccessful/>} />
+               <Route path={"/editarPaquete"} element={<RacketEdit/>} />
+           </Routes>
         </div>
      </div>
  );

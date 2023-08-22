@@ -4,16 +4,17 @@ import { DataScroller } from 'primereact/datascroller';
 import { Button } from 'primereact/button';
 import "./packageList.css"
 import {Image, Transformation} from "cloudinary-react";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import ScrollToTop from "../../../components/scrollToTop/ScrollToTop";
 import {Tooltip} from "primereact/tooltip";
 
 var data = require('./PackageData.json')
 
-export default function PackageList(props){
+export default function PackageList(){
 
     const [ listaProductos, setListaProductos] = useState()
-    var packageData = data.filter(e => e.deporte === props.match.params.deporte)
+    const params = useParams();
+    const packageData = data.filter(e => e.deporte === params.deporte);
 
     const image_size= 500;
 
